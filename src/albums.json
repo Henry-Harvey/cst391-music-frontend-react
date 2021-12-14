@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "title": "title1",
+    "artist": "artist1",
+    "description": "description1",
+    "year": 2001,
+    "imgURL": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 1,
+    "title": "title2",
+    "artist": "artist2",
+    "description": "description2",
+    "year": 2002,
+    "imgURL": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 2,
+    "title": "title3",
+    "artist": "artist3",
+    "description": "description3",
+    "year": 2003,
+    "imgURL": "https://via.placeholder.com/150"
+  }
+]
