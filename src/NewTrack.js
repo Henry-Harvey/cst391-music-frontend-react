@@ -11,6 +11,10 @@ class NewTrack extends React.Component {
     this.props.changeTrackLyrics(this.props.track.number, lyrics);
   };
 
+  changeVideo_url = (video_url) => {
+    this.props.changeTrackVideo_url(this.props.track.number, video_url);
+  };
+
   render() {
     return (
       <div>
@@ -26,6 +30,12 @@ class NewTrack extends React.Component {
           label="Lyrics"
           changeData={this.changeLyrics}
           value={this.props.track.lyrics}
+        />
+        <FormInput
+          id="video_url"
+          label="Video URL"
+          changeData={this.changeVideo_url}
+          value={this.props.track.video_url}
         />
       </div>
     );

@@ -11,6 +11,7 @@ class NewAlbum extends React.Component {
     artist: "",
     description: "",
     year: "",
+    image_name: "",
     tracks: [],
   };
 
@@ -28,6 +29,10 @@ class NewAlbum extends React.Component {
 
   changeYear = (year) => {
     this.setState({ year: year });
+  };
+
+  changeImage_name = (image_name) => {
+    this.setState({ image_name: image_name });
   };
 
   handleSubmit = (event) => {
@@ -79,6 +84,12 @@ class NewAlbum extends React.Component {
     this.setState(s);
   };
 
+  changeTrackVideo_url = (trackNumber, video_url) => {
+    var s = this.state;
+    s.tracks[trackNumber - 1].video_url = video_url;
+    this.setState(s);
+  };
+
   render() {
     return (
       <div>
@@ -108,12 +119,19 @@ class NewAlbum extends React.Component {
             changeData={this.changeYear}
             value={this.state.year}
           />
+          <FormInput
+            id="image_name"
+            label="Image Name"
+            changeData={this.changeImage_name}
+            value={this.state.image_name}
+          />
           {this.state.tracks.map((track) => {
             return (
               <NewTrack
                 track={track}
                 changeTrackTitle={this.changeTrackTitle}
                 changeTrackLyrics={this.changeTrackLyrics}
+                changeTrackVideo_url={this.changeTrackVideo_url}
               />
             );
           })}
