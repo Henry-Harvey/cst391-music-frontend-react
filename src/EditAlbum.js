@@ -38,7 +38,7 @@ class EditAlbum extends React.Component {
 
   editAlbum = async (album) => {
     axios
-      .put("http://localhost:3000/albums", album)
+      .put("https://cst391-music-backend.herokuapp.com/albums", album)
       .then((result) => {
         console.log("Edit Album result", result);
         alert("Album Edit Successful");

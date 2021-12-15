@@ -38,7 +38,7 @@ class NewAlbum extends React.Component {
 
   saveAlbum = async (album) => {
     axios
-      .post("http://localhost:3000/albums", album)
+      .post("https://cst391-music-backend.herokuapp.com/albums", album)
       .then((result) => {
         console.log("Create Album result", result);
         alert("Album Creation Successful");
